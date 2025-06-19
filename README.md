@@ -86,21 +86,30 @@ app/
 
 1. 克隆项目
 ```bash
-git clone https://github.com/yourusername/mapdemo.git
+git clone https://github.com/lantier123/GoogleMap.git
 ```
 
-2. 在 `local.properties` 中添加 Google Maps API Key
-```properties
-MAPS_API_KEY=your_api_key_here
-```
+2. 获取 Google Maps API Key
+   - 访问 [Google Cloud Console](https://console.cloud.google.com/)
+   - 创建新项目或选择现有项目
+   - 启用 Maps SDK for Android
+   - 创建 API 密钥
 
-3. 在 Android Studio 中打开项目并运行
+3. 配置 API Key
+   - 在 `app/src/main/AndroidManifest.xml` 中替换 `YOUR_GOOGLE_MAPS_API_KEY_HERE` 为您的实际 API 密钥
+   - 或者创建 `local.properties` 文件并添加：
+   ```properties
+   MAPS_API_KEY=your_actual_api_key_here
+   ```
+
+4. 在 Android Studio 中打开项目并运行
 
 ## 注意事项
 
 - 需要 Android API Level 24 或更高版本
 - 需要有效的 Google Maps API Key
 - 需要启用设备位置服务
+- 请确保 API 密钥有适当的限制（如应用包名限制）以确保安全
 
 ## 许可证
 
